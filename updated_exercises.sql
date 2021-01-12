@@ -8,9 +8,11 @@ SELECT * FROM albums;
 
 SELECT 'All albums released before 1980' AS 'release_date 1800';
 SELECT * FROM albums WHERE release_date < 1980;
+
 UPDATE albums
-SET release_date = 1800
+SET release_date = (release_date - 100)
 WHERE release_date < 1980;
+
 SELECT * FROM albums WHERE release_date < 1900;
 
 SELECT 'All albums by Michael Jackson' AS 'PETER JACKSON';
