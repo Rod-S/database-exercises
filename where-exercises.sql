@@ -1,7 +1,7 @@
 USE employees;
 
 SELECT * FROM employees
-WHERE first_name IN ('Irena', 'Vidya', 'Maya');
+WHERE first_name IN('Irena', 'Vidya', 'Maya');
 
 SELECT * FROM employees
 WHERE last_name LIKE 'E%';
@@ -15,3 +15,21 @@ AND DAY(birth_date) = '25';
 
 SELECT * FROM employees
 WHERE last_name LIKE '%q%';
+
+SELECT * FROM employees
+WHERE first_name ='Irena' OR first_name = 'Vidya' OR first_name = 'Maya';
+
+SELECT * FROM employees
+WHERE (first_name ='Irena' OR first_name = 'Vidya' OR first_name = 'Maya') AND gender = 'M';
+
+SELECT * FROM employees
+WHERE last_name LIKE 'E%' OR last_name LIKE '%E';
+
+SELECT * FROM employees
+WHERE last_name LIKE 'E%' AND last_name LIKE '%E';
+
+SELECT * FROM employees
+WHERE (YEAR(hire_date) BETWEEN '1990' AND '1999') AND (MONTH(birth_date) = 12 AND DAY(birth_date) = 25);
+
+SELECT * FROM employees
+WHERE last_name LIKE '%q%' AND last_name NOT LIKE '%qu%';
