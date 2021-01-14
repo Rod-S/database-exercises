@@ -49,3 +49,6 @@ values ('Michael Jackson', 'Thriller', 1982, 'Pop, Rock, R&B', 47.3),
        ('Pink Floyd', 'The Wall', 1979, 'Progressive rock', 17.6),
        ('Santana', 'Supernatural', 1999, 'Rock', 20.5),
        ('Guns N'' Roses', 'Appetite for Destruction', 1987, 'Hard rock', 21.6);
+
+insert into albums (artist, name)
+values ('Michael Jackson', 'Thriller')
