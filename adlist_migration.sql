@@ -1,7 +1,7 @@
 use adlist;
 
-drop table if exists category;
 drop table if exists ad_category;
+drop table if exists category;
 drop table if exists ad;
 drop table if exists users;
 
@@ -29,13 +29,11 @@ create table category (
 );
 
 create table ad_category (
-                     id INT UNSIGNED NOT NULL,
                      ad_id INT UNSIGNED NOT NULL,
                      cat_id INT UNSIGNED NOT NULL,
                      foreign key (ad_id) references ad (id),
                      foreign key (cat_id) references category (id)
 );
-
 
 
 # create table users (

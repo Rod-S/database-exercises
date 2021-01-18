@@ -19,6 +19,5 @@ INSERT INTO category(name) VALUES
 SELECT * FROM category;
 
 INSERT INTO ad (user_id, title, description, category) VALUES
-('ad1', 'my ad''s description', 1);
-
+(1, 'ad1', 'my ad''s description', '1,2,3,4');
 SELECT * FROM ad;
