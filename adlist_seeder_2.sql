@@ -130,4 +130,17 @@ WHERE id IN (
 );
 
 
-# SELECT * FROM
+# SQL QUERIES
+
+# For a given ad, what is the email address of the user that created it?
+SELECT users.email FROM ad
+JOIN users ON users.id = ad.user_id
+WHERE ad.id = 1;
+# For a given ad, what category, or categories, does it belong to?
+SELECT JSON_ARRAYAGG(category_id) as ad_categories FROM ad_category WHERE ad_id = 4;
+# For a given category, show all the ads that are in that category.
+SELECT JSON_ARRAYAGG(ad_id) as ad_ids FROM ad_category WHERE category_id = 1;
+# For a given user, show all the ads they have posted.
+SELECT * from ad
+JOIN users on users.id = ad.user_id
+WHERE ad.user_id = 1;
