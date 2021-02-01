@@ -1,4 +1,4 @@
-# use adlist;
+use adlister_db;
 drop table if exists ad_category;
 drop table if exists category;
 drop table if exists ad;
